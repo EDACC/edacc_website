@@ -1,0 +1,77 @@
+---
+title: Welcome to EDACC
+---
+
+<div class="jumbotron">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>EDACC</h1>
+        <p>Experiment Design and Administration for Computer Clusters</p>
+        <p><a href="#learnmore" class="btn btn-primary btn-lg">Learn more</a></p>
+      </div>
+      <div class="col-lg-4"><%= image_tag 'edacc_transparent.gif', :width => '250', :class => 'logo' %></div>
+    </div>
+</div>
+
+<div class="row"><a id="learnmore"></a>
+  <div class="col-lg-4"><i class="icon-dashboard icon-2x"></i> Parallelisation of target algorithm runs across independent compute nodes</div>
+  <div class="col-lg-4"><i class="icon-search icon-2x"></i> Graphical and numerical analysis of experiment results</div>
+  <div class="col-lg-4"><i class="icon-github icon-2x"></i> Free and open-source</div>
+</div>
+
+* * *
+
+EDACC is a framework for the design, execution and analysis of large experiments with arbitrary algorithms on computer clusters. It automates
+many of the tasks commonly done manually such as distributing the algorithm executables across compute nodes, running the required computation tasks
+and collecting the results.
+
+#### Core components
+
+* Database: Stores information about algorithm executables, problem instances and experiments
+* [GUI Application](https://github.com/EDACC/edacc_gui): Java GUI application for managing algorithms and problem instances, creating and analysing experiments
+* [Computation Client](https://github.com/EDACC/edacc_client): Execution of the algorithms on remote, distributed systems such as computer clusters
+
+#### Optional components
+
+* [Web Frontend](https://github.com/EDACC/edacc_web): Web client to perform monitoring and statistical analysis of experiment results
+* Job server: Small application that increases the throughput of the system when large-scale grids are used
+* Visualizer: Visualize the configuration process of algorithms and to analyze the results
+* [Automatic algorithm configurator API](https://github.com/EDACC/edacc_api): Java API for parallel automatic algorithm configurators
+* [eAAC](https://github.com/EDACC/edacc_aac): Automatic configurator framework, which includes several automatic algorithm configurators
+
+### <i class="icon-download"></i> Releases
+
+The latest release contains the GUI application, which can be used to set up an EDACC database, and the computation client.
+
+<a href="/downloads/edacc-0.4.1.zip" class="btn btn-success">edacc-0.4.1.zip, 8.7M</a>
+
+We also recommend checking out the latest development versions.
+
+### <i class="icon-user"></i> Applications
+
+EDACC was used to conduct the [SAT Challenge 2012](http://baldur.iti.kit.edu/SAT-Challenge-2012/) ([Web Frontend](http://edacc2.informatik.uni-ulm.de/SATChallenge2012/experiments/)) and the [SAT Competition 2013](http://www.satcompetition.org/2013/) ([Web Frontend](https://edacc4.informatik.uni-ulm.de/SC13/experiments/)) and in tuning some of the SAT solvers that participated in these competitions (see [publications](#publications))
+
+### <a id="publications"></a><i class="icon-book"></i> Publications
+
+EDACC is developed at the [Institute of Theoretical Computer Science](http://www.uni-ulm.de/en/in/institute-of-theoretical-computer-science.html) of [Ulm University](http://www.uni-ulm.de/en/) and introduced in the following publications:
+
+* Adrian Balint, Daniel Gall, Gregor Kapler, Robert Retz, Daniel Diepold and Simon Gerber  
+    [EDACC - An advanced Platform for the Experiment Design, Administration and Analysis of Empirical Algorithms](http://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.190/Mitarbeiter/balint/EDACC_LION5.pdf)  
+    to appear in the proceedings of LION5
+    
+* Adrian Balint, Daniel Gall, Gregor Kapler, Robert Retz  
+    [Experiment Design and Administration for Computer Cluster for SAT-solvers (EDACC), System Description](http://jsat.ewi.tudelft.nl/content/volume7/JSAT7_7_Balint.pdf)  
+    in JSAT Volume 7 
+
+
+Some references to EDACC in scientific work, publications and articles include:
+
+* [Proceedings of SAT Challenge 2012; Solver and Benchmark Descriptions](http://hdl.handle.net/10138/34218)
+
+* [Proceedings of SAT Competition 2013; Solver and Benchmark Descriptions](http://hdl.handle.net/10138/40026)
+
+* Oliver Gableske, Sven Müelich, Daniel Diepold  
+  On the Performance of CDCL-based Message Passing Inspired Decimation using Rho-Sigma-PMP-i  
+  EasyChair Proceedings of the Pragmatics of SAT Workshop (POS13), 2013.  
+  [Dimetheus SAT Solver](https://www.gableske.net/dimetheus)
+
