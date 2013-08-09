@@ -2,6 +2,9 @@ activate :directory_indexes
 
 activate :livereload
 
+
+set :relative_links, true
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
